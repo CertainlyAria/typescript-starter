@@ -30,5 +30,16 @@
     "resolutions": {
         "commitizen/minimist": "1.2.6",
         "commitizen/inquirer": "8.2.4"
+    },
+    "dependencies": {
+        "@babel/cli": "^7.18.6",
+        "@babel/core": "^7.18.6",
+        "@babel/node": "^7.18.6",
+        "@babel/plugin-proposal-decorators": "^7.18.6",
+        "@babel/preset-env": "^7.18.6",
+        "@babel/preset-typescript": "^7.18.6",
+        "@types/babel__core": "^7.1.19",
+        "babel-plugin-module-resolver": "^4.1.0",
+        "babel-plugin-transform-typescript-metadata": "^0.3.2"
     }
 }
