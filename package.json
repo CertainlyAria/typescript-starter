@@ -1,5 +1,15 @@
 {
     "license": "MIT",
+    "scripts": {
+        "check:formatting": "npm run _prettier -- --check",
+        "format": "npm run _prettier -- --write",
+        "_prettier": "prettier --config ./.prettierrc.js --ignore-path ./.prettierignore"
+    },
+    "devDependencies": {
+        "commitizen": "^4.2.4",
+        "cz-conventional-changelog": "^3.3.0",
+        "prettier": "^2.7.1"
+    },
     "config": {
         "commitizen": {
             "path": "./node_modules/cz-conventional-changelog"
@@ -8,9 +18,5 @@
     "resolutions": {
         "commitizen/minimist": "1.2.6",
         "commitizen/inquirer": "8.2.4"
-    },
-    "devDependencies": {
-        "commitizen": "^4.2.4",
-        "cz-conventional-changelog": "^3.3.0"
     }
 }
