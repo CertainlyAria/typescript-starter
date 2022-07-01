@@ -1,0 +1,91 @@
+{
+    "compilerOptions": {
+        /*
+            Use TypeScript only for type checking and
+             generating .d.ts files.
+            Transpiling should be done using another tool
+             such as babel or SWC. See the configuration on
+             root imports for more info.
+        */
+        "outDir": "./dist",
+        "declaration": true,
+        "emitDeclarationOnly": true,
+        "sourceMap": false,
+
+        /*
+            Ensure that each file can be safely transpiled without
+             relying on other imports. Useful when using other
+             transpilers such as babel or SWC instead of tsc.
+        */
+        "isolatedModules": true,
+
+        /*
+            Enable latest JS features.
+            Keep in sync with
+             parserOptions.ecmaVersion & parserOptions.lib
+            in .eslintrc.json
+        */
+        "target": "ES2021",
+        "lib": ["ES2021"],
+
+        // Allow JavaScript files to be safely imported
+        "allowJs": true,
+        "checkJs": true,
+
+        // Allow importing of json files
+        "resolveJsonModule": true,
+
+        // Code quality
+        "strict": true,
+        "allowUnreachableCode": false,
+        "forceConsistentCasingInFileNames": true,
+        "noImplicitOverride": true,
+        "noImplicitReturns": true,
+        "noPropertyAccessFromIndexSignature": true,
+        "noFallthroughCasesInSwitch": true,
+
+        /*
+            Root Imports
+            ⚠ This will only enable root import features in code editors (like vscode).
+                TypeScript compiler DOES NOT rewrite the paths in compilation. See:
+                    https://github.com/microsoft/TypeScript/issues/10866
+                    https://github.com/microsoft/TypeScript/issues/16640
+                    https://github.com/microsoft/TypeScript/issues/26722
+            Transpilers (babel, swc) must be configured separately to get this feature working.
+            If using swc
+                keep baseUrl & paths in sync with
+                    jsc.baseUrl & jsc.paths
+                in .swcrc
+            If using babel
+                install babel-plugin-module-resolver
+                keep baseUrl in sync with plugin option "root"
+                keep paths in sync with plugin "alias"
+        */
+        "baseUrl": ".",
+        "paths": {
+            "~/*": ["./src/*"]
+        },
+
+        // Other
+        "moduleResolution": "Node",
+
+        /* NOT TAKEN INTO ACCOUNT
+            Because tsc is not generating js files.
+            These options must be supported be the transpiler (bable, swc, etc.)
+        */
+        "emitDecoratorMetadata": true, // experimental support for emitting type metadata
+        "experimentalDecorators": true, // experimental support for TC39 decorators standard
+        "esModuleInterop": true, // interoperability between cjs and mjs
+        "jsx": "preserve", // Don't make any changes to jsx
+        "module": "CommonJS" // output cjs modules
+    },
+    "include": [
+        "./**/*.ts",
+        "./**/*.cts",
+        "./**/*.mts",
+        "./**/*.js",
+        "./**/*.mjs",
+        "./**/*.cjs"
+    ],
+    "exclude": ["**/node_modules", "dist"]
+}
