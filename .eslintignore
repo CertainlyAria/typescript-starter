@@ -1,0 +1,9 @@
+# NPM dependencies
+/node_modules
+
+# Output dir
+/dist
+
+# Autogenerate or managed
+package-lock.json
+.git

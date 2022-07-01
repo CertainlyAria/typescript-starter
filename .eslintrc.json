@@ -1,0 +1,119 @@
+{
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        /* keep in sync with
+             compilerOptions.target & compilerOptions.lib
+             in .tsconfig.json
+        */
+        "ecmaVersion": 2021,
+        "lib": ["ES2021"],
+
+        "ecmaFeatures": {
+            "impliedStrict": true
+        },
+        "sourceType": "module"
+    },
+    "env": {
+        /* keep in sync with
+             compilerOptions.target & compilerOptions.lib
+             in .tsconfig.json
+        */
+        "es2021": true, // new JS Features
+        "node": true // NodeJS APIs
+    },
+    "extends": [
+        "eslint:recommended",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:import/errors",
+        "plugin:import/warnings",
+        "plugin:import/typescript",
+        "plugin:prettier/recommended"
+    ],
+    "plugins": ["@typescript-eslint", "simple-import-sort"],
+    "rules": {
+        /* Formatting Rules */
+        "prettier/prettier": ["warn"],
+        "import/newline-after-import": "warn",
+        "simple-import-sort/exports": "warn",
+        "simple-import-sort/imports": [
+            "warn",
+            {
+                "groups": [
+                    //side effect imports
+                    ["^\\u0000"],
+                    //imports from node modules (excluding type imports)
+                    ["(^@?([A-Za-z0-9])).*(?<!\\u0000)$"],
+                    //absolute imports
+                    ["^~"],
+                    //relative import from parent dirs
+                    ["^\\.\\."],
+                    //relative import from sub dirs
+                    ["^\\."],
+                    //anything else (excluding type imports)
+                    ["!(^\\u0000)^"],
+                    //type imports
+                    [".*(\\u0000)$"]
+                ]
+            }
+        ],
+        "curly": ["warn", "all"],
+        "max-len": [
+            "warn",
+            {
+                /* keep in sync with
+                     printWidth
+                     in .prettierrc.js
+                */
+                "code": 80,
+                "ignoreUrls": true,
+                "ignoreStrings": true,
+                "ignoreTemplateLiterals": true
+            }
+        ],
+        "linebreak-style": ["warn", "unix"],
+        "quotes": ["off", "double"],
+        "semi": ["warn", "always"],
+
+        /* Code Quality */
+        "no-unused-labels": "warn",
+        "prefer-const": "warn",
+        "no-var": "warn",
+        "no-restricted-imports": [
+            "error",
+            {
+                "patterns": [
+                    {
+                        "group": [
+                            "~/**/*/__internals__/**/*",
+                            "../**/*/__internals__/**/*"
+                        ],
+                        "message": "imports from \"__internals__\" directory are restricted to prevent importer from depending on implementation details."
+                    }
+                ]
+            }
+        ],
+
+        /* Types */
+        "import/no-unresolved": "error",
+        "@typescript-eslint/ban-ts-comment": "off",
+        "@typescript-eslint/no-empty-function": "off",
+        "@typescript-eslint/no-explicit-any": "off"
+    },
+    "settings": {
+        "import/parsers": {
+            "@typescript-eslint/parser": [
+                ".ts",
+                ".cts",
+                ".mts",
+                ".js",
+                ".mjs",
+                ".cjs"
+            ]
+        },
+        "import/resolver": {
+            "typescript": {
+                "extensions": [".ts", ".cts", ".mts", ".js", ".mjs", ".cjs"]
+            }
+        }
+    }
+}
