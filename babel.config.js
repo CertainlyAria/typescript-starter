@@ -1,7 +1,9 @@
 /**
- * @type {import("@babel/core").ConfigFunction}
+ * @type {( api: import("@babel/core").ConfigAPI,
+ *          module: false | "cjs"
+ *        ) => import("@babel/core").TransformOptions}
  */
-module.exports = (api) => {
+module.exports = (api, module) => {
     api.cache.forever();
     return {
         presets: [
@@ -10,6 +12,7 @@ module.exports = (api) => {
                 {
                     useBuiltIns: "usage",
                     corejs: { version: 3, proposals: true },
+                    modules: module,
                 },
             ],
             "@babel/preset-typescript",

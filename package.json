@@ -1,6 +1,7 @@
 {
     "license": "MIT",
     "scripts": {
+        "build": "cross-env NODE_ENV=production ts-node scripts/build dist",
         "check:formatting": "npm run _prettier -- --check",
         "check:types": "tsc",
         "lint": "eslint",
@@ -8,10 +9,13 @@
         "_prettier": "prettier --config ./.prettierrc.js --ignore-path ./.prettierignore"
     },
     "devDependencies": {
+        "@types/fs-extra": "^9.0.13",
         "@types/node": "^18.0.0",
+        "@types/uglify-js": "^3.16.0",
         "@typescript-eslint/eslint-plugin": "^5.30.3",
         "@typescript-eslint/parser": "^5.30.3",
         "commitizen": "^4.2.4",
+        "cross-env": "^7.0.3",
         "cz-conventional-changelog": "^3.3.0",
         "eslint": "^8.18.0",
         "eslint-config-prettier": "^8.5.0",
@@ -19,8 +23,11 @@
         "eslint-plugin-import": "^2.26.0",
         "eslint-plugin-prettier": "^4.2.1",
         "eslint-plugin-simple-import-sort": "^7.0.0",
+        "fs-extra": "^10.1.0",
         "prettier": "^2.7.1",
-        "typescript": "^4.7.4"
+        "ts-node": "^10.8.1",
+        "typescript": "^4.7.4",
+        "uglify-js": "^3.16.1"
     },
     "config": {
         "commitizen": {

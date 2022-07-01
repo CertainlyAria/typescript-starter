@@ -7,7 +7,7 @@
              such as babel or SWC. See the configuration on
              root imports for more info.
         */
-        "outDir": "./dist",
+        "outDir": "./dist/types",
         "declaration": true,
         "emitDeclarationOnly": true,
         "sourceMap": false,
