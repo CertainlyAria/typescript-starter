@@ -19,7 +19,8 @@
              in .tsconfig.json
         */
         "es2021": true, // new JS Features
-        "node": true // NodeJS APIs
+        "node": true, // NodeJS APIs
+        "jest": true // Jest APIs
     },
     "extends": [
         "eslint:recommended",

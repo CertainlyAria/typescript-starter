@@ -16,6 +16,14 @@ const buildSteps: Array<BuildStep> = [
         },
     },
     {
+        name: "Run tests",
+        buildFn: () => {
+            execSync("npm run test", {
+                stdio: "inherit",
+            });
+        },
+    },
+    {
         name: "Clean Contents of Dist Directory",
         buildFn: async () => {
             await remove(getDistDir());
@@ -39,7 +47,7 @@ const buildSteps: Array<BuildStep> = [
                     " --copy-files --no-copy-ignored" +
                     ` --out-dir ${path.join(distDir, "mjs")}` +
                     " --extensions '.ts,.cts,.mts,.js,.cjs,.mjs'" +
-                    ` --ignore "**/*.test.ts","**/*.test.js","src/test/**/*"`,
+                    ` --ignore "**/*.test.ts","**/*.test.js","src/test/**/*","__tests__/**/*"`,
             );
             execSync(
                 "babel src --config-file ./babel.config.cjs.js" +
@@ -47,7 +55,7 @@ const buildSteps: Array<BuildStep> = [
                     " --copy-files --no-copy-ignored" +
                     ` --out-dir ${path.join(distDir, "cjs")}` +
                     " --extensions '.ts,.cts,.mts,.js,.cjs,.mjs'" +
-                    ` --ignore "**/*.test.ts","**/*.test.js","src/test/**/*"`,
+                    ` --ignore "**/*.test.ts","**/*.test.js","src/test/**/*","__tests__/**/*"`,
             );
         },
     },

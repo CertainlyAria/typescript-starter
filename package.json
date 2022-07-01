@@ -3,6 +3,8 @@
     "scripts": {
         "dev": "cross-env NODE_ENV=development nodemon src/index.ts",
         "build": "cross-env NODE_ENV=production ts-node scripts/build dist",
+        "test:watch": "npm run test -- --watch",
+        "test": "cross-env NODE_ENV=test jest",
         "check:formatting": "npm run _prettier -- --check",
         "check:types": "tsc",
         "lint": "eslint",
@@ -11,6 +13,7 @@
     },
     "devDependencies": {
         "@types/fs-extra": "^9.0.13",
+        "@types/jest": "^28.1.4",
         "@types/node": "^18.0.0",
         "@types/uglify-js": "^3.16.0",
         "@typescript-eslint/eslint-plugin": "^5.30.3",
@@ -25,6 +28,7 @@
         "eslint-plugin-prettier": "^4.2.1",
         "eslint-plugin-simple-import-sort": "^7.0.0",
         "fs-extra": "^10.1.0",
+        "jest": "^28.1.2",
         "nodemon": "^2.0.18",
         "prettier": "^2.7.1",
         "ts-node": "^10.8.1",
