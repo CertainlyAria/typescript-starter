@@ -1,3 +1,16 @@
 {
-  "license": "MIT"
+    "license": "MIT",
+    "config": {
+        "commitizen": {
+            "path": "./node_modules/cz-conventional-changelog"
+        }
+    },
+    "resolutions": {
+        "commitizen/minimist": "1.2.6",
+        "commitizen/inquirer": "8.2.4"
+    },
+    "devDependencies": {
+        "commitizen": "^4.2.4",
+        "cz-conventional-changelog": "^3.3.0"
+    }
 }
