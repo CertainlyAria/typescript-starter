@@ -6,7 +6,6 @@
         "test:watch": "npm run test -- --watch",
         "test": "cross-env NODE_ENV=test jest",
         "check:formatting": "npm run _prettier -- --check",
-        "check:types": "tsc",
         "lint": "eslint",
         "format": "npm run _prettier -- --write",
         "_prettier": "prettier --config ./.prettierrc.js --ignore-path ./.prettierignore"
