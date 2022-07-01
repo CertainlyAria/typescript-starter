@@ -39,6 +39,14 @@
             "path": "./node_modules/cz-conventional-changelog"
         }
     },
+    "browserslist": {
+        "production": [
+            "node 16"
+        ],
+        "development": [
+            "node 17.9"
+        ]
+    },
     "resolutions": {
         "commitizen/minimist": "1.2.6",
         "commitizen/inquirer": "8.2.4"
