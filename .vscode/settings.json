@@ -1,0 +1,47 @@
+{
+    "files.associations": {
+        ".eslintignore": "ignore",
+        ".env": "dotenv",
+        ".env.local": "dotenv",
+        ".env.production": "dotenv",
+        ".env.production.local": "dotenv",
+        ".env.development.local": "dotenv",
+        ".env.development": "dotenv",
+        ".env.test.local": "dotenv",
+        ".env.test": "dotenv"
+    },
+    "editor.formatOnSave": true,
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[javascriptreact]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[typescriptreact]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[json]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[jsonc]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[html]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[markdown]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "vsicons.projectDetection.disableDetect": true,
+    "vsicons.associations.files": [
+        {
+            "icon": "babel",
+            "extensions": ["babel.config.cjs.js", "babel.config.mjs.js"],
+            "filename": true,
+            "format": "svg"
+        }
+    ]
+}
