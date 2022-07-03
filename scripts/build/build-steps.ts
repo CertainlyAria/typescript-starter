@@ -41,22 +41,24 @@ const buildSteps: Array<BuildStep> = [
         name: "Transpile src files",
         buildFn: () => {
             const distDir = getDistDir();
-            execSync(
-                "babel src --config-file ./babel.config.mjs.js" +
-                    " --source-maps" +
-                    " --copy-files --no-copy-ignored" +
-                    ` --out-dir ${path.join(distDir, "mjs")}` +
-                    " --extensions '.ts,.cts,.mts,.js,.cjs,.mjs'" +
-                    ` --ignore "**/*.test.ts","**/*.test.js","src/test/**/*","__tests__/**/*"`,
-            );
-            execSync(
-                "babel src --config-file ./babel.config.cjs.js" +
-                    " --source-maps" +
-                    " --copy-files --no-copy-ignored" +
-                    ` --out-dir ${path.join(distDir, "cjs")}` +
-                    " --extensions '.ts,.cts,.mts,.js,.cjs,.mjs'" +
-                    ` --ignore "**/*.test.ts","**/*.test.js","src/test/**/*","__tests__/**/*"`,
-            );
+            const originalEsmTarget = process.env.BABEL_TRANSFORM_ESM_TARGET;
+            const babelCommand =
+                "babel src" +
+                " --source-maps" +
+                " --copy-files --no-copy-ignored" +
+                " --extensions '.ts,.cts,.mts,.js,.cjs,.mjs'" +
+                ` --ignore "**/*.test.ts","**/*.test.js","src/test/**/*","__tests__/**/*"`;
+
+            // build esm modules
+            process.env.BABEL_TRANSFORM_ESM_TARGET = "false";
+            execSync(babelCommand + ` --out-dir ${path.join(distDir, "mjs")}`);
+
+            // build cjs modules
+            process.env.BABEL_TRANSFORM_ESM_TARGET = "cjs";
+            execSync(babelCommand + ` --out-dir ${path.join(distDir, "cjs")}`);
+
+            // revert env changes
+            process.env.BABEL_TRANSFORM_ESM_TARGET = originalEsmTarget;
         },
     },
     {

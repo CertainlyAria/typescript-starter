@@ -35,13 +35,5 @@
     "[markdown]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
-    "vsicons.projectDetection.disableDetect": true,
-    "vsicons.associations.files": [
-        {
-            "icon": "babel",
-            "extensions": ["babel.config.cjs.js", "babel.config.mjs.js"],
-            "filename": true,
-            "format": "svg"
-        }
-    ]
+    "vsicons.projectDetection.disableDetect": true
 }

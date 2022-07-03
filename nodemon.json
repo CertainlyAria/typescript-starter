@@ -23,7 +23,7 @@
     ],
     "execMap": {
         "js": "node",
-        "ts": "babel-node --config-file './babel.config.cjs.js' --extensions '.ts,.cts,.mts,.js,.cjs,.mjs' {{filename}}"
+        "ts": "babel-node --config-file './babel.config.js' --extensions '.ts,.cts,.mts,.js,.cjs,.mjs' {{filename}}"
     },
     "ext": "js,ts,json"
 }

@@ -1,13 +1,9 @@
-/**
- * @returns {Promise<import("@jest/types").Config.InitialOptions>}
- */
-module.exports = async () => {
+import type { Config } from "jest";
+
+export default async (): Promise<Config> => {
     return {
         transform: {
-            "\\.[jt]sx?$": [
-                "babel-jest",
-                { configFile: "./babel.config.cjs.js" },
-            ],
+            "\\.[jt]sx?$": "babel-jest",
         },
 
         testEnvironment: "node",
@@ -19,7 +15,6 @@ module.exports = async () => {
         ],
 
         setupFilesAfterEnv: ["./src/test/setup-tests.ts"],
-
         verbose: true,
     };
 };

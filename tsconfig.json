@@ -8,8 +8,7 @@
              root imports for more info.
         */
         "outDir": "./dist/types",
-        "declaration": true,
-        "emitDeclarationOnly": true,
+        "noEmit": true,
         "sourceMap": false,
         "removeComments": true,
 
@@ -79,6 +78,10 @@
         "esModuleInterop": true, // interoperability between cjs and mjs
         "jsx": "preserve", // Don't make any changes to jsx
         "module": "CommonJS" // output cjs modules
+    },
+    "ts-node": {
+        "esm": true,
+        "files": true
     },
     "include": [
         "./**/*.ts",
