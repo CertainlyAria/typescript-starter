@@ -10,13 +10,25 @@
         "format": "npm run _prettier -- --write",
         "_prettier": "prettier --config ./.prettierrc.js --ignore-path ./.prettierignore"
     },
+    "dependencies": {
+        "dotenv": "^16.0.1"
+    },
     "devDependencies": {
+        "@babel/cli": "^7.18.6",
+        "@babel/core": "^7.18.6",
+        "@babel/node": "^7.18.6",
+        "@babel/plugin-proposal-decorators": "^7.18.6",
+        "@babel/preset-env": "^7.18.6",
+        "@babel/preset-typescript": "^7.18.6",
+        "@types/babel__core": "^7.1.19",
         "@types/fs-extra": "^9.0.13",
         "@types/jest": "^28.1.4",
         "@types/node": "^18.0.0",
         "@types/uglify-js": "^3.16.0",
         "@typescript-eslint/eslint-plugin": "^5.30.3",
         "@typescript-eslint/parser": "^5.30.3",
+        "babel-plugin-module-resolver": "^4.1.0",
+        "babel-plugin-transform-typescript-metadata": "^0.3.2",
         "commitizen": "^4.2.4",
         "cross-env": "^7.0.3",
         "cz-conventional-changelog": "^3.3.0",
@@ -50,17 +62,5 @@
     "resolutions": {
         "commitizen/minimist": "1.2.6",
         "commitizen/inquirer": "8.2.4"
-    },
-    "dependencies": {
-        "@babel/cli": "^7.18.6",
-        "@babel/core": "^7.18.6",
-        "@babel/node": "^7.18.6",
-        "@babel/plugin-proposal-decorators": "^7.18.6",
-        "@babel/preset-env": "^7.18.6",
-        "@babel/preset-typescript": "^7.18.6",
-        "@types/babel__core": "^7.1.19",
-        "babel-plugin-module-resolver": "^4.1.0",
-        "babel-plugin-transform-typescript-metadata": "^0.3.2",
-        "dotenv": "^16.0.1"
     }
 }
