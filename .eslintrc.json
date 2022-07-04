@@ -103,6 +103,7 @@
         },
         "import/resolver": {
             "typescript": {
+                "project": "./tsconfig.json",
                 "extensions": [".ts", ".cts", ".mts", ".js", ".mjs", ".cjs"]
             }
         }
