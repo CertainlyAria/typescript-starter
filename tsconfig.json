@@ -19,12 +19,7 @@
         */
         "isolatedModules": true,
 
-        /*
-            Enable latest JS features.
-            Keep in sync with
-             parserOptions.ecmaVersion & parserOptions.lib
-            in .eslintrc.json
-        */
+        // Enable latest JS features.
         "target": "ES2021",
         "lib": ["ES2021"],
 

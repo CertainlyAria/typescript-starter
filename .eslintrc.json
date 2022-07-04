@@ -1,17 +1,7 @@
 {
     "parser": "@typescript-eslint/parser",
     "parserOptions": {
-        /* keep in sync with
-             compilerOptions.target & compilerOptions.lib
-             in .tsconfig.json
-        */
-        "ecmaVersion": 2021,
-        "lib": ["ES2021"],
-
-        "ecmaFeatures": {
-            "impliedStrict": true
-        },
-        "sourceType": "module"
+        "project": "./tsconfig.json"
     },
     "env": {
         /* keep in sync with
