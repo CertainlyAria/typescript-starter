@@ -11,7 +11,8 @@
         "_prettier": "prettier --config ./.prettierrc.js --ignore-path ./.prettierignore"
     },
     "dependencies": {
-        "dotenv": "^16.0.1"
+        "dotenv": "^16.0.1",
+        "zod": "^3.17.3"
     },
     "devDependencies": {
         "@babel/cli": "^7.18.6",

@@ -84,7 +84,8 @@
         "./**/*.mts",
         "./**/*.js",
         "./**/*.mjs",
-        "./**/*.cjs"
+        "./**/*.cjs",
+        ".env.d.ts"
     ],
     "exclude": ["**/node_modules", "dist"]
 }
