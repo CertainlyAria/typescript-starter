@@ -8,6 +8,14 @@ import { minify } from "./__internals__/minify";
 
 const buildSteps: Array<BuildStep> = [
     {
+        name: 'check types under "./script" directory',
+        buildFn: () => {
+            execSync("tsc --project ./scripts/tsconfig.json", {
+                stdio: "inherit",
+            });
+        },
+    },
+    {
         name: "lint",
         buildFn: () => {
             execSync("npm run lint -- src", {

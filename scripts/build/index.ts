@@ -1,3 +1,5 @@
+import "~/modules/load-env";
+
 import { buildSteps } from "./build-steps";
 
 async function runBuildSteps() {

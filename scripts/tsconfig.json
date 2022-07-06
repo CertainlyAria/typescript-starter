@@ -1,0 +1,12 @@
+{
+    "extends": "../tsconfig.json",
+    "include": [
+        "./**/*.ts",
+        "./**/*.cts",
+        "./**/*.mts",
+        "./**/*.js",
+        "./**/*.mjs",
+        "./**/*.cjs",
+        "../.env.d.ts"
+    ]
+}
