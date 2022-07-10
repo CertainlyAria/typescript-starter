@@ -6,27 +6,21 @@ import { envSchema } from "./env-schema";
 
 const NODE_ENV = getNODE_ENV();
 
-const envFilePaths = [];
+const envFilePaths = [
+    `.env.${NODE_ENV}.local`,
+    `.env.local`,
+    `.env.${NODE_ENV}`,
+    `.env`,
+].filter((path) => {
+    if (NODE_ENV == "test" && path == ".env.local") {
+        return false;
+    } else {
+        return true;
+    }
+});
+
 const loadedEnvFiles: string[] = [];
 const failedEnvFiles: Array<{ path: string; errorMsg?: string }> = [];
-
-if (NODE_ENV == "production") {
-    envFilePaths.push(
-        ".env.production.local",
-        ".env.local",
-        ".env.production",
-        ".env",
-    );
-} else if (NODE_ENV == "development") {
-    envFilePaths.push(
-        ".env.development.local",
-        ".env.local",
-        ".env.development",
-        ".env",
-    );
-} else if (NODE_ENV == "test") {
-    envFilePaths.push(".env.test.local", ".env.test", ".env");
-}
 
 for (const filePath of envFilePaths) {
     if (fs.existsSync(filePath)) {
