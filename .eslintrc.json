@@ -62,8 +62,6 @@
             }
         ],
         "linebreak-style": ["warn", "unix"],
-        "quotes": ["off", "double"],
-        "semi": ["warn", "always"],
 
         /* Code Quality */
         "no-unused-labels": "warn",
