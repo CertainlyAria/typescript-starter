@@ -4,7 +4,7 @@
         "dev": "cross-env NODE_ENV=development nodemon src/index.ts",
         "build": "cross-env NODE_ENV=production babel-node --config-file './babel.config.js' --extensions '.ts,.cts,.mts,.js,.cjs,.mjs' scripts/build dist",
         "test:watch": "npm run test -- --watch",
-        "test": "cross-env NODE_ENV=test BABEL_TRANSFORM_ESM_TARGET=cjs jest",
+        "test": "cross-env NODE_ENV=test BABEL_TRANSFORM_ESM_TARGET=cjs jest --passWithNoTests",
         "check:formatting": "npm run _prettier -- --check",
         "lint": "eslint",
         "format": "npm run _prettier -- --write",
