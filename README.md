@@ -13,7 +13,7 @@
     <p align="center">
         Documented TypeScript Template to Speed Up New Project Setup
         <br />
-        <a href="https://codesandbox.io">CodeSandbox.io</a>
+        <a href="https://codesandbox.io/s/github/CertainlyAria/typescript-starter">CodeSandbox.io</a>
         &nbsp;&nbsp;·&nbsp;&nbsp;
         <a href="https://github.com/CertainlyAria/typescript-starter/issues">Report a Bug or Request a Feature</a>
     </p>
@@ -710,13 +710,13 @@ I have used [Best-README-Template](https://github.com/othneildrew/Best-README-Te
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-[contributors-shield]: https://img.shields.io/github/contributors/certainlyAria/ts-starter.svg
-[contributors-url]: https://github.com/certainlyAria/ts-starter/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/certainlyAria/ts-starter.svg
-[forks-url]: https://github.com/certainlyAria/ts-starter/network/members
-[stars-shield]: https://img.shields.io/github/stars/certainlyAria/ts-starter.svg
-[stars-url]: https://github.com/certainlyAria/ts-starter/stargazers
-[issues-shield]: https://img.shields.io/github/issues/raw/certainlyAria/ts-starter.svg
-[issues-url]: https://github.com/certainlyAria/ts-starter/issues
-[license-shield]: https://img.shields.io/github/license/certainlyAria/ts-starter.svg
-[license-url]: https://github.com/certainlyAria/ts-starter/blob/master/LICENSE
+[contributors-shield]: https://img.shields.io/github/contributors/certainlyAria/typescript-starter.svg
+[contributors-url]: https://github.com/certainlyAria/typescript-starter/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/certainlyAria/typescript-starter.svg
+[forks-url]: https://github.com/certainlyAria/typescript-starter/network/members
+[stars-shield]: https://img.shields.io/github/stars/certainlyAria/typescript-starter.svg
+[stars-url]: https://github.com/certainlyAria/typescript-starter/stargazers
+[issues-shield]: https://img.shields.io/github/issues-raw/certainlyAria/typescript-starter.svg
+[issues-url]: https://github.com/certainlyAria/typescript-starter/issues
+[license-shield]: https://img.shields.io/github/license/certainlyAria/typescript-starter.svg
+[license-url]: https://github.com/certainlyAria/typescript-starter/blob/master/LICENSE
