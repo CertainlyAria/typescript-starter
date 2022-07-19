@@ -1,7 +1,5 @@
-function sayHi() {
-    console.log("Hi");
-}
+import { tsEnv } from "./modules/load-env";
 
-sayHi();
+console.log(tsEnv);
 
 export {};
