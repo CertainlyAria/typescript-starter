@@ -52,10 +52,9 @@ Features
     <li><a href="#-compatible-with-npm-yarn--pnpm">📦 Compatible with npm, yarn & pnpm</a></li>
     <li><a href="#%EF%B8%8F-recommended-vs-code-settings--extensions">⚙️ Recommended VS-Code Settings & Extensions</a></li>
     <li>
-        <a href="#-consistent-commit-messages-with-commitizen">📝 Consistent Commit Messages with Commitizen</a>
-        <ul>
-            <li><a href="#%EF%B8%8F-workaround-for-commitizens-security-vulnerability">🛡️ Workaround for Commitizen's Security Vulnerability</a></li>
-        </ul>
+        <a href="#-consistent-commit-messages-with-commitizen">
+            📝 Consistent Commit Messages with Commitizen
+        </a>
     </li>
     <li>
         <a href="#-a-simple-build-pipeline">🧱 A Simple Build Pipeline</a>
@@ -644,14 +643,6 @@ Sticking to a commit message specification can make searching & browsing commits
 This template uses [commitizen](https://github.com/commitizen/cz-cli) so you create "Conventional Commit Messages".
 
 Run `npx cz` to generate a "Conventional Commit".
-
-### 🛡️ Workaround for Commitizen's Security Vulnerability
-
-[Commitizen is not well maintained at the moment](https://github.com/commitizen/cz-cli/issues/897).This is not great since [it depends on a vulnerable version of minimist](https://github.com/commitizen/cz-cli/issues/914) and no updates are released to fix this issue.
-
-Fortunately, there is a workaround. It is possible to override `commitizen`'s dependency and force it to use latest `minimist` version by modifying package.json file. `npm`, `yarn` & `pnpm` have slightly different ways to override dependencies. Correct dependency overrides for all three package managers are defined in `package.json` file.
-
-<p align="right">(<a href="#top">back to top</a>)</p>
 
 ## 🧱 A Simple Build Pipeline
 

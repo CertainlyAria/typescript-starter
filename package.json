@@ -58,21 +58,5 @@
         "development": [
             "node 17.9"
         ]
-    },
-    "resolutions": {
-        "commitizen/minimist": "1.2.6",
-        "commitizen/inquirer": "8.2.4"
-    },
-    "overrides": {
-        "commitizen": {
-            "inquirer": "8.2.4",
-            "minimist": "1.2.6"
-        }
-    },
-    "pnpm": {
-        "overrides": {
-            "minimist>commitizen": "1.2.6",
-            "inquirer>commitizen": "8.2.4"
-        }
     }
 }
