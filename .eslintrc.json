@@ -20,7 +20,7 @@
         "plugin:import/typescript",
         "plugin:prettier/recommended"
     ],
-    "plugins": ["@typescript-eslint", "simple-import-sort"],
+    "plugins": ["simple-import-sort"],
     "rules": {
         /* Formatting Rules */
         "prettier/prettier": ["warn"],
