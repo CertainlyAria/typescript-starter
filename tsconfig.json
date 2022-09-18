@@ -7,7 +7,7 @@
              such as babel or SWC. See the configuration on
              root imports for more info.
         */
-        "outDir": "./dist/types",
+        "outDir": "./dist",
         "noEmit": true,
         "sourceMap": false,
         "removeComments": true,
@@ -72,7 +72,7 @@
         "experimentalDecorators": true, // experimental support for TC39 decorators standard
         "esModuleInterop": true, // interoperability between cjs and mjs
         "jsx": "preserve", // Don't make any changes to jsx
-        "module": "CommonJS" // output cjs modules
+        "module": "ES2022" // output cjs modules
     },
     "ts-node": {
         "esm": true,
