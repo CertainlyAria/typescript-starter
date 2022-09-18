@@ -1,29 +1,10 @@
 {
-    "ignore": [
-        "./.git",
-        ".dist",
-
-        ".eslintignore",
-        ".eslintrc.json",
-        ".gitignore",
-        ".prettierignore",
-        ".prettierrc.cjs",
-        ".prettierrc.js",
-        ".swcrc",
-        "tsconfig.json",
-        "tsconfig.prod.json",
-
-        "./src/test",
-        "*.test.ts",
-        "*.test.mts",
-        "*.test.cts",
-        "*.test.js",
-        "*.test.mjs",
-        "*.test.cjs"
-    ],
+    "events": {
+        "start": "clear"
+    },
+    "watch": [".build"],
     "execMap": {
-        "js": "node",
-        "ts": "babel-node --config-file './babel.config.js' --extensions '.ts,.cts,.mts,.js,.cjs,.mjs' {{filename}}"
+        "js": "node"
     },
     "ext": "js,ts,json"
 }

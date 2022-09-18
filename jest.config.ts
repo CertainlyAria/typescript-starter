@@ -5,12 +5,16 @@ export default async (): Promise<Config> => {
         transform: {
             "\\.[jt]sx?$": "babel-jest",
         },
+        extensionsToTreatAsEsm: [".ts"],
 
         testEnvironment: "node",
+
+        testPathIgnorePatterns: ["/node_modules/", ".build/"],
 
         collectCoverageFrom: [
             "**/*.{js,ts}",
             "!**/*.d.ts",
+            "!.build/",
             "!**/node_modules/**",
         ],
 
