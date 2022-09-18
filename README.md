@@ -73,7 +73,7 @@ Features
             </li>
             <li>
                 <a href="#compile-both-commonjs--ecma-modules">
-                    Compile both CommonJS & Ecma Modules
+                    Transpile using babel
                 </a>
             </li>
             <li><a href="#minify-the-output">Minify</a></li>
@@ -676,20 +676,16 @@ There shouldn't be a type error test when you build for production. This step ch
 
 > 💡 Under the hood, this step uses `tsconfig.prod.json` instead of `tsconfig.json` for TypeScript configuration. This is necessary in order to prevent generating type definitions for test files.
 
-### Compile both CommonJS & Ecma Modules
+### Transpile Using Babel
 
-While support for ES Modules are pretty good, there are still scenarios where you might want to work with CJS. For example as of writing this, `babel-node` [doesn't support native ES Modules](https://github.com/babel/babel/issues/14218#issuecomment-1026610620). `babel-node` is used to compile files on the fly during development.
+Source code will be transpiled using babel according to configuration in `babel.config.cjs` file.
 
-`babel.config.js` reads ES Module transform target from environment variables. This way build script can change the environment variable and get different outputs using just one config file for babel.
-
-#### Caveats
-
-TODO
+> ⚠️ CommonJS support is removed from this template. Transpiler will only generate EcmaScript modules.
 
 ### Minify the Output
 
 This step uses [UglifyJS](https://github.com/mishoo/UglifyJS) to minify the contents of `dist` directory.
-You can modify the options for UglifyJS in `scripts/build/\_\_internals\_\_/uglify-js-options.ts` file.
+You can modify the options for UglifyJS in `scripts/build/commands/minify.js` file.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
