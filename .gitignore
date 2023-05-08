@@ -3,3 +3,6 @@
 
 # Output dir
 /dist
+
+# Temp build dir
+/.build
