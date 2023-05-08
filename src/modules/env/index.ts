@@ -2,7 +2,7 @@ import fs from "fs";
 
 import { getNODE_ENV } from "./__internals__/get-node-env";
 import { loadEnvFile } from "./__internals__/load-env-from-file";
-import { envSchema } from "./env-schema";
+import { envSchema } from "./schema";
 
 const NODE_ENV = getNODE_ENV();
 
@@ -45,16 +45,16 @@ if (!envParseResult.success) {
         "environment variables are not set correctly " +
             JSON.stringify(fieldErrors, undefined, 4) +
             "\nloaded env files (in order):" +
-            loadedEnvFiles.reduce((prev, path, i) => {
+            loadedEnvFiles.reduce((prev, path) => {
                 return prev + `\n  ${path}`;
             }, "") +
             (failedEnvFiles.length > 0 ? "\nfailed env files" : "") +
-            failedEnvFiles.reduce((prev, failedPath, i) => {
+            failedEnvFiles.reduce((prev, failedPath) => {
                 return prev + `\n ${failedPath.errorMsg}`;
             }, "") +
             "\n",
     );
 }
 
-const tsEnv = envParseResult.data;
-export { tsEnv };
+const env = envParseResult.data;
+export { env };

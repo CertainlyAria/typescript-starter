@@ -1,5 +1,5 @@
-import { tsEnv } from "./modules/load-env";
+import { env } from "./modules/env";
 
-console.log(tsEnv);
+console.log(env);
 
 export {};

@@ -1,4 +1,4 @@
-import "~/modules/load-env";
+import "~/modules/env";
 
 beforeAll(() => {});
 afterAll(() => {});

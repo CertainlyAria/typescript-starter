@@ -19,18 +19,6 @@ const envSchema = z.object({
             }
         })
         .transform((val) => parseInt(val)),
-    BABEL_TRANSFORM_ESM_TARGET: z
-        .enum([
-            "amd",
-            "umd",
-            "systemjs",
-            "commonjs",
-            "cjs",
-            "auto",
-            "false",
-            "true",
-        ])
-        .optional(),
 });
 
 export { envSchema };

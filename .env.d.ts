@@ -1,6 +1,6 @@
 import { z } from "zod";
 
-import { envSchema } from "./src/modules/load-env/env-schema";
+import { envSchema } from "./src/modules/env/schema";
 
 declare global {
     namespace NodeJS {

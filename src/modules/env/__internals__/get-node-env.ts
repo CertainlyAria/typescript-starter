@@ -1,6 +1,6 @@
 import { z } from "zod";
 
-import { envSchema } from "../env-schema";
+import { envSchema } from "../schema";
 
 function getNODE_ENV(): z.infer<typeof envSchema.shape.NODE_ENV> {
     const initialEnvParseResult = envSchema
