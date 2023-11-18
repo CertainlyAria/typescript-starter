@@ -113,6 +113,10 @@ git remote remove origin
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
+# Compatibility Note
+
+Out of the box, you can use this template with node `v20.6.0` and above. If you are on node `v20.5.1` or below, open `package.json` and replace all 3 instances of `--import tsx/esm` with `--loader tsx/esm`
+
 # 🧩 Some Useful Commands
 
 These commands are defined in `package.json` file, inside the `scripts` object. You can run each command by prefixing it with `npm run `. For example: `npm run dev` or `npm run build`. Some commands require additional parameters.

@@ -1,7 +1,7 @@
 /**
  * @type {import("prettier").Config}
  */
-module.exports = {
+export default {
     tabWidth: 4,
     trailingComma: "all",
     /* keep in sync with
