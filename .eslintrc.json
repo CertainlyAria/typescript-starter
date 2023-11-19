@@ -64,6 +64,13 @@
         "linebreak-style": ["warn", "unix"],
 
         /* Code Quality */
+        "no-unused-vars": "off",
+        "@typescript-eslint/no-unused-vars": [
+            "warn",
+            {
+                "varsIgnorePattern": "_ASSERT_TYPE_"
+            }
+        ],
         "no-unused-labels": "warn",
         "prefer-const": "warn",
         "no-var": "warn",
