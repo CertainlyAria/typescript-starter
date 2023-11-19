@@ -24,29 +24,8 @@
     "rules": {
         /* Formatting Rules */
         "prettier/prettier": ["warn"],
-        "import/newline-after-import": "warn",
         "simple-import-sort/exports": "warn",
-        "simple-import-sort/imports": [
-            "warn",
-            {
-                "groups": [
-                    //side effect imports
-                    ["^\\u0000"],
-                    //imports from node modules (excluding type imports)
-                    ["(^@?([A-Za-z0-9])).*(?<!\\u0000)$"],
-                    //absolute imports
-                    ["^~"],
-                    //relative import from parent dirs
-                    ["^\\.\\."],
-                    //relative import from sub dirs
-                    ["^\\."],
-                    //anything else (excluding type imports)
-                    ["!(^\\u0000)^"],
-                    //type imports
-                    [".*(\\u0000)$"]
-                ]
-            }
-        ],
+        "simple-import-sort/imports": "off",
         "curly": ["warn", "all"],
         "max-len": [
             "warn",
