@@ -1,6 +1,6 @@
+import { exit } from "node:process";
 import fs from "fs-extra";
 import { getTsconfig } from "get-tsconfig";
-import { exit } from "node:process";
 import { minify } from "uglify-js";
 
 import { lint } from "./commands/lint";
