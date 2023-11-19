@@ -44,8 +44,8 @@ Features
     <li><a href="#%EF%B8%8F-root-imports">⛓️ Root Imports</a></li>
     <li><a href="#-jest-for-running-tests">🧪 Jest For Running Tests</a></li>
     <li>
-        <a href="#-import-guard-for-__internals__-directory">
-            💂 Import Guard for "__internals__" directory
+        <a href="#-import-guard-for-_internal-directory">
+            💂 Import Guard for "_internal" directory
         </a>
     </li>
     <li><a href="#-env-files--type-safe-environment-variables">🌐 .env files & Type Safe Environment Variables</a></li>
@@ -362,7 +362,7 @@ Jest works out of the box with babel. You can use the `jest.config.ts` file in t
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-## 💂 Import Guard for `__internals__` directory
+## 💂 Import Guard for `_internal` directory
 
 ### Why?
 
@@ -481,12 +481,12 @@ src
 └───modules
     └───validate-user
         │    index.ts
-        └─── __internals__
+        └─── _internal
             │   user-schema.ts
 ```
 
 ```typescript
-// src/modules/validate-user/__internals__/user-schema.ts
+// src/modules/validate-user/_internal/user-schema.ts
 import * as Yup from "yup";
 
 const userSchema = Yup.object({}).required().shape({
@@ -501,7 +501,7 @@ export { userSchema };
 //src/modules/validate-user/index.ts
 import * as Yup from "yup";
 
-import { userSchema } from "./__internals__/user-schema";
+import { userSchema } from "./_internal/user-schema";
 
 function isValidUser(data: unknown): data is Yup.InferType<typeof userSchema> {
     return userSchema.isValidSync(data);
@@ -512,7 +512,7 @@ Now ESLint will complain if `src/index.ts` tries to do something like:
 
 ```typescript
 // src/index.ts
-import { userSchema } from "~/modules/validate-user/__internals__/user-schema"; // 🔴 ESLint: '~/modules/validate-user/__internals__/user-schema' import is restricted from being used by a pattern. imports from "__internals__" directory are restricted to prevent importer from depending on implementation details.
+import { userSchema } from "~/modules/validate-user/_internal/user-schema"; // 🔴 ESLint: '~/modules/validate-user/_internal/user-schema' import is restricted from being used by a pattern. imports from "_internal" directory are restricted to prevent importer from depending on implementation details.
 
 const data = { name: "Aria" };
 

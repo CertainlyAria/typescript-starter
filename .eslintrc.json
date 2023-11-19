@@ -59,10 +59,10 @@
                 "patterns": [
                     {
                         "group": [
-                            "~/**/*/__internals__/**/*",
-                            "../**/*/__internals__/**/*"
+                            "~/**/*/_internal/**/*",
+                            "../**/*/_internal/**/*"
                         ],
-                        "message": "imports from \"__internals__\" directory are restricted to prevent importer from depending on implementation details."
+                        "message": "imports from \"_internal\" directory are restricted to prevent importer from depending on implementation details."
                     }
                 ]
             }

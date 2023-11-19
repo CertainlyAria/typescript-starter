@@ -1,7 +1,7 @@
 import fs from "fs";
 
-import { getNODE_ENV } from "./__internals__/get-node-env";
-import { loadEnvFile } from "./__internals__/load-env-from-file";
+import { getNODE_ENV } from "./_internal/get-node-env";
+import { loadEnvFile } from "./_internal/load-env-from-file";
 import { envSchema } from "./schema";
 
 const NODE_ENV = getNODE_ENV();
