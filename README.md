@@ -143,46 +143,24 @@ Runs all of your tests once.
 
 See [Jest For Running Tests](#-jest-for-running-tests) for more info.
 
-## `check:formatting`
+## `prettier:check`
 
-**Requires:** path to a file or directory
-
-### Example
-
-```bash
-npm run check:formatting src
-```
-
-Checks formatting issues of a file (or files inside a given directory) using [Prettier](https://prettier.io/).
+Checks formatting of all files using [Prettier](https://prettier.io/).
 See [Consistent Formatting with Prettier](#-consistent-formatting-with-prettier) for more info.
 
-## `lint`
+## `prettier:format`
 
-**Requires:** path to a file or directory
+Formats all files using [Prettier](https://prettier.io/).
+See [Consistent Formatting with Prettier](#-consistent-formatting-with-prettier) for more info.
 
-### Example
+## `eslint:check`
 
-```bash
-npm run lint src
-```
-
-Checks linting issues of a file (or files inside a given directory) using [ESLint](https://eslint.org/).
+Checks linting issues in all files using [ESLint](https://eslint.org/).
 See [Static Code Analysis with ESLint]() for more info.
 
-## `format`
+## `tsc:check`
 
-**Requires:** path to a file or directory
-
-### Example
-
-```bash
-npm run format src
-```
-
-Formats a file (or files inside a given directory) using [Prettier](https://prettier.io/).
-See [Consistent Formatting with Prettier]() for more info.
-
-<p align="right">(<a href="#top">back to top</a>)</p>
+Checks for type errors in all files.
 
 # Feature Docs
 
@@ -275,26 +253,21 @@ import "~/styles/index.css";
 
 //imports from npm packages
 import { appWithTranslation } from "next-i18next";
+import type { AppProps } from "next/app";
 import { useEffect, useState } from "react";
 import { QueryClientProvider } from "react-query";
-import { Hydrate } from "react-query/hydration";
 
 //imports from other code written in this project
 import { Layout } from "~/modules/layout";
-import { useCurrentLocale } from "~/modules/use-locale";
+import { useLocale } from "~/modules/use-locale";
 import { useTheme } from "~/modules/use-theme";
-
-//type imports
-import type { AppProps } from "next/app";
 ```
 
 ### How?
 
-These rules are enforced using ESLint & [Simple Import Sort ESLint Plugin](https://github.com/lydell/eslint-plugin-simple-import-sort). These rules are autofixable which means that you can quickly sort imports from your code editor.
+These rules are enforced using [@ianvs/prettier-plugin-sort-imports](https://www.npmjs.com/package/@ianvs/prettier-plugin-sort-imports).
 
-![image](https://user-images.githubusercontent.com/44586130/178501787-ff443040-37cb-442d-84ba-74dd37180eca.png)
-
-In `.eslintrc.json`, inside `rules` object, you can find the configured rule for `simple-import-sort/imports` plugin. If you want to disable this rule, change it `"warn"` to `"off"`. You can read more about customization options in [Simple Import Sort Docs](https://github.com/lydell/eslint-plugin-simple-import-sort)
+In `.prettierrc.js`, you can find the configuration for `@ianvs/prettier-plugin-sort-imports` plugin. If you want to disable this, remove the plugin from `plugins` array and from `devDependencies` in `package.json`.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 

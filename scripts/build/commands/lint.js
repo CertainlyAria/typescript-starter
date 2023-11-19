@@ -5,5 +5,5 @@ import { asyncSpawn } from "../../async-spawn";
  * @returns {Promise<undefined>}
  */
 export function lint(srcDir) {
-    return asyncSpawn(`npm run lint -- ${srcDir}`);
+    return asyncSpawn(`npm run _eslint -- ${srcDir}`);
 }

@@ -1,6 +1,7 @@
-import type { Config } from "jest";
-
-export default async (): Promise<Config> => {
+/**
+ * @type {()=>Promise<import("jest").Config>}
+ */
+export default async () => {
     return {
         transform: {
             "\\.[jt]sx?$": "babel-jest",
