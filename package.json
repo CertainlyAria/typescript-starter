@@ -2,7 +2,7 @@
     "type": "module",
     "license": "MIT",
     "scripts": {
-        "dev": "concurrently -c 'bgYellow.black,bgGreen.black' -n babel,'nodemon' 'npm:_transpile:watch' 'npm:_nodemon'",
+        "dev": "concurrently -c 'bgYellow.black,bgGreen.black' -n babel,nodemon -i --default-input-target nodemon 'npm:_transpile:watch' 'npm:_nodemon'",
         "build": "cross-env NODE_ENV=production npm run _node scripts/build",
         "test:watch": "npm run test -- --watch",
         "test": "cross-env NODE_ENV=test NODE_OPTIONS='--import tsx/esm' jest --passWithNoTests",
