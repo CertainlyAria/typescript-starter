@@ -72,7 +72,13 @@
         "import/no-unresolved": "error",
         "@typescript-eslint/ban-ts-comment": "off",
         "@typescript-eslint/no-empty-function": "off",
-        "@typescript-eslint/no-explicit-any": "off"
+        "@typescript-eslint/no-explicit-any": "off",
+        "@typescript-eslint/consistent-type-imports": [
+            "warn",
+            {
+                "fixStyle": "inline-type-imports"
+            }
+        ]
     },
     "settings": {
         "import/parsers": {
